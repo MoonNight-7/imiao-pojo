@@ -14,12 +14,11 @@ import java.time.LocalDateTime;
 * @TableName imiao_user_info
 */
 @Data
-public class UserVO implements Serializable {
+public class UserDetailVO implements Serializable {
 
     /**
     * 用户id
     */
-
     @ApiModelProperty("用户id")
     private Long userId;
     /**
@@ -27,6 +26,7 @@ public class UserVO implements Serializable {
     */
     @ApiModelProperty("用户名")
     private String username;
+
     /**
     * 头像id
     */
@@ -51,7 +51,7 @@ public class UserVO implements Serializable {
      * 积分
      */
     @ApiModelProperty("用户积分")
-    private Integer rewardPoint;
+    private Long rewardPoint;
     /**
     * 累计登录次数
     */
@@ -72,9 +72,4 @@ public class UserVO implements Serializable {
     */
     @ApiModelProperty("数据创建时间")
     private LocalDateTime gmtCreate;
-    /**
-    * 数据最后修改时间
-    */
-    @ApiModelProperty("数据最后修改时间")
-    private LocalDateTime gmtModified;
 }

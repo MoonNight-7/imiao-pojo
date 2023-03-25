@@ -42,7 +42,7 @@ public class AdminInfo implements Serializable {
     * 头像ID
     */
     @ApiModelProperty("头像ID")
-    private Long avatarId;
+    private Long avatarUrl;
     /**
     * 是否启用，默认为1
     */
