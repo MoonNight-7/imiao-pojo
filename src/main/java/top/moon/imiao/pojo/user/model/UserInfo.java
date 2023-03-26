@@ -43,8 +43,8 @@ public class UserInfo implements Serializable {
     /**
     * 头像id
     */
-    @ApiModelProperty("头像id")
-    private Long avatarUrl;
+    @ApiModelProperty("头像url")
+    private String avatarUrl;
     /**
     * 昵称
     */

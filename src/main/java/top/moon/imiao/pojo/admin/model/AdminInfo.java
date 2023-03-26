@@ -58,8 +58,8 @@ public class AdminInfo implements Serializable {
     /**
     * 权限ID列表
     */
-    @ApiModelProperty("权限ID列表")
-    private String permissionIdList;
+    @ApiModelProperty("权限ID")
+    private String permissionId;
     /**
     * 登录次数
     */

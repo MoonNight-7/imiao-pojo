@@ -4,9 +4,11 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import top.moon.imiao.pojo.permission.vo.PermissionVO;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.List;
 
 /**
  * AdminVO:
@@ -15,8 +17,8 @@ import java.time.LocalDateTime;
  * @date 2023/03/20 14:01
  */
 @Data
-@ApiModel("管理员VO")
-public class AdminVO implements Serializable {
+@ApiModel("管理员详细信息视图")
+public class AdminDetailVO implements Serializable {
 
     @ApiModelProperty("管理员ID")
     private Long adminId;

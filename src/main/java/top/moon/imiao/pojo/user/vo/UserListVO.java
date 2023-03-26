@@ -1,5 +1,6 @@
 package top.moon.imiao.pojo.user.vo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
@@ -27,8 +28,8 @@ public class UserListVO implements Serializable {
     /**
     * 头像id
     */
-    @ApiModelProperty("头像id")
-    private Long avatarUrl;
+    @ApiModelProperty("头像url")
+    private String avatarUrl;
     /**
     * 昵称
     */
@@ -63,10 +64,12 @@ public class UserListVO implements Serializable {
     * 最后登录时间
     */
     @ApiModelProperty("最后登录时间")
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private LocalDateTime gmtLastLogin;
     /**
     * 数据创建时间
     */
     @ApiModelProperty("数据创建时间")
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private LocalDateTime gmtCreate;
 }
