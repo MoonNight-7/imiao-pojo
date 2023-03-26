@@ -3,8 +3,10 @@ package top.moon.imiao.pojo.user.dto;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import org.hibernate.validator.constraints.Length;
+import top.moon.imiao.common.validation.RegExpressions;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 
@@ -13,20 +15,18 @@ import java.io.Serializable;
 * @TableName imiao_user_info
 */
 @Data
-public class UserAddNewDTO implements Serializable {
+public class UserAddNewDTO implements RegExpressions,Serializable {
     /**
     * 用户名
     */
-    @NotBlank(message="[用户名]不能为空")
-    @Size(max= 20,message="编码长度不能超过20")
     @ApiModelProperty(value = "用户名" ,name = "username",example = "user",required = true)
-    @Length(max= 20,message="编码长度不能超过20")
+    @Pattern(regexp = REGEXP_USER_USERNAME, message = MESSAGE_USER_USERNAME)
     private String username;
     /**
     * 密码
     */
-    @NotBlank(message="[密码]不能为空")
     @ApiModelProperty(value = "密码" ,name = "password",example = "123456",required = true)
+    @Pattern(regexp = REGEXP_USER_PASSWORD, message = MESSAGE_USER_PASSWORD)
     private String password;
     /**
     * 头像id
@@ -36,17 +36,13 @@ public class UserAddNewDTO implements Serializable {
     /**
     * 昵称
     */
-    @Size(max= 50,message="编码长度不能超过50")
     @ApiModelProperty(value = "昵称",name = "nickname",example = "普通用户",required = true)
-    @Length(max= 50,message="编码长度不能超过50")
     private String nickname;
     /**
     * 手机号
     */
-    @NotBlank(message="[手机号]不能为空")
-    @Size(max= 255,message="编码长度不能超过255")
     @ApiModelProperty(value = "手机号",name = "phone",example = "12345678901",required = true)
-    @Length(max= 255,message="编码长度不能超过255")
+    @Pattern(regexp = REGEXP_PHONE, message = MESSAGE_PHONE)
     private String phone;
     /**
     * 性别
