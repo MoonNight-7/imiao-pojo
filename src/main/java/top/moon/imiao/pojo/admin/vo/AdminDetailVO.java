@@ -53,6 +53,11 @@ public class AdminDetailVO implements Serializable {
     @ApiModelProperty("权限ID")
     private String permissionId;
     /**
+     * 权限名称
+     */
+    @ApiModelProperty("权限名称")
+    private String permissionName;
+    /**
      * 登录次数
      */
     @ApiModelProperty("登录次数")
