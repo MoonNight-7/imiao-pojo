@@ -1,4 +1,4 @@
-package top.moon.imiao.pojo.cat.model;
+package top.moon.imiao.pojo.cat.vo;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 * @TableName imiao_cat_species
 */
 @Data
-public class CatSpecies implements Serializable {
+public class CatSpeciesStandardVO implements Serializable {
 
     /**
     * 种类ID
