@@ -1,4 +1,4 @@
-package top.moon.imiao.pojo.cat.model;
+package top.moon.imiao.pojo.cat.vo;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 * @TableName imiao_cat_species
 */
 @Data
-public class CatSpecies implements Serializable {
+public class CatSpeciesListVO implements Serializable {
 
     /**
     * 种类ID
@@ -75,15 +75,5 @@ public class CatSpecies implements Serializable {
     @ApiModelProperty("猫咪毛发颜色")
     @Length(max= 20,message="编码长度不能超过20")
     private String color;
-    /**
-    * 数据创建时间
-    */
-    @ApiModelProperty("数据创建时间")
-    private LocalDateTime gmtCreate;
-    /**
-    * 数据修改时间
-    */
-    @ApiModelProperty("数据修改时间")
-    private LocalDateTime gmtModified;
 
 }
