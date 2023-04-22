@@ -5,6 +5,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
@@ -50,6 +51,11 @@ public class UserListVO implements Serializable {
      */
     @ApiModelProperty("用户积分")
     private Long rewardPoint;
+    /**
+     * 余额
+     */
+    @ApiModelProperty("用户余额")
+    private BigDecimal balance;
     /**
     * 累计登录次数
     */

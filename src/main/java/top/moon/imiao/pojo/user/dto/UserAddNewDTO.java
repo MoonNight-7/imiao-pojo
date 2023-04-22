@@ -41,7 +41,7 @@ public class UserAddNewDTO implements RegExpressions,Serializable {
     /**
     * 手机号
     */
-    @ApiModelProperty(value = "手机号",name = "phone",example = "12345678901",required = true)
+    @ApiModelProperty(value = "手机号",name = "phone",example = "13654789999",required = true)
     @Pattern(regexp = REGEXP_PHONE, message = MESSAGE_PHONE)
     private String phone;
     /**
