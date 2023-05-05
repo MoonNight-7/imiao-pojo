@@ -7,6 +7,7 @@ import org.hibernate.validator.constraints.Length;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
@@ -19,7 +20,6 @@ public class UserVO implements Serializable {
     /**
     * 用户id
     */
-
     @ApiModelProperty("用户id")
     private Long userId;
     /**
@@ -52,6 +52,11 @@ public class UserVO implements Serializable {
      */
     @ApiModelProperty("用户积分")
     private Integer rewardPoint;
+    /**
+     * 账户余额
+     */
+    @ApiModelProperty("账户余额")
+    private BigDecimal balance;
     /**
     * 累计登录次数
     */
